@@ -28,7 +28,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/gademo:v20 .
 
-      - name: Log in to Docker Hub
+      - name: Login into Docker Hub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
